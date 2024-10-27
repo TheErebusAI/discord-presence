@@ -1,0 +1,14 @@
+[Unit]
+Description=Erebus Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+User=erebus
+WorkingDirectory=/home/erebus/persistent/discord_bot
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 erebus_bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
